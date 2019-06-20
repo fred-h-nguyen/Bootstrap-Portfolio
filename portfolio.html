@@ -8,16 +8,64 @@
     <title>Bootstrap-Portfolio</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <!--style fixes-->
+
+    <style>
+        header {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            background-color: #4aaaa5;
+            color: #ffffff;
+        }
+
+        h2 {
+            color: #4aaaa5;
+        }
+
+        .bgcolorfix {
+            background-color: #ffffff;
+        }
+
+        .borderfix {
+            border-bottom: black 1px solid;
+        }
+
+        .navborderfix {
+            border: 2px solid #cccccc;
+        }
+
+        body {
+            background-image: url(assets/images/background.png);
+        }
+
+        @media screen and (min-width:574px) {
+            .justifyfix {
+                justify-content: flex-end;
+            }
+        }
+
+        @media screen and (max-width: 574px) {
+            .justifyfix {
+                justify-content: space-around;
+            }
+        }
+    </style>
 </head>
 
 <body>
-    <header>Fred Nguyen</header>
-    <nav>
-        <a href="index.html">About</a> &vert;
-        <a href="#">Portfolio</a> &vert;
-        <a href="contact.html">Contact</a>
-    </nav>
-    <h1>Portfolio</h1>
+    <!--navbar stuff-->
+    <div class="container">
+        <div class="row navborderfix p-0">
+            <header class="h1 p-2 col-sm-3 m-0 text-center">Fred Nguyen</header>
+
+            <nav class="navbar p-2 col-sm-9 bgcolorfix justifyfix">
+                <a href="#">About</a> &vert;
+                <a href="portfolio.html">Portfolio</a> &vert;
+                <a href="contact.html">Contact</a>
+            </nav>
+        </div>
+    </div>
+    
+    <h2>Portfolio</h2>
     <p> Coming Soon.....</p>
         <img src="https://place-hold.it/300x500">
         <img class="proj1" src="https://place-hold.it/300x500">
