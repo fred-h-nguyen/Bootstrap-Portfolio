@@ -8,32 +8,77 @@
     <title>Bootstrap-Portfolio</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!--style fixes-->
+
+    <style>
+        header {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            background-color: #4aaaa5;
+            color: #ffffff;
+        }
+
+        h2 {
+            color: #4aaaa5;
+        }
+
+        .bgcolorfix {
+            background-color: #ffffff;
+        }
+
+        .borderfix {
+            border-bottom: black 1px solid;
+        }
+
+        .navborderfix {
+            border: 2px solid #cccccc;
+        }
+
+        body {
+            background-image: url(assets/images/background.png);
+        }
+
+        @media screen and (min-width:574px) {
+            .justifyfix {
+                justify-content: flex-end;
+            }
+        }
+
+        @media screen and (max-width: 574px) {
+            .justifyfix {
+                justify-content: space-around;
+            }
+        }
+    </style>
 </head>
 
 <body>
-    <div class="row">
-        <div class="col-sm-3">
-            <header>Fred Nguyen</header>
-        </div>
-        <div class="col-sm-9">
-            <nav class="navbar justify-content-end">
+    <!--navbar stuff-->
+    <div class="container">
+        <div class="row navborderfix p-0">
+            <header class="h1 p-2 col-sm-3 m-0 text-center">Fred Nguyen</header>
+
+            <nav class="navbar p-2 col-sm-9 bgcolorfix justifyfix">
                 <a href="#">About</a> &vert;
                 <a href="portfolio.html">Portfolio</a> &vert;
                 <a href="contact.html">Contact</a>
             </nav>
         </div>
     </div>
-    <div class="container">
-        <div class="row">
-            <div class="row">
-                <h1>
+
+
+    <!--mainbody content-->
+    <div class="container bgcolorfix">
+        <div class="row m-3 p-3 ">
+            <div class="row mb-2 col-sm-12 borderfix">
+                <h2>
                     About Me
-                </h1>
+                </h2>
             </div>
 
             <div class="row ">
                 <div>
-                    <img class="w-25 float-left m-2" src="assets/images/profile-picture.jpg"
+                    <img class="w-25 float-left mr-3" src="assets/images/profile-picture.jpg"
                         alt="Fred Nguyen Profile Picture">
 
                     <div>
@@ -99,8 +144,10 @@
             </div>
 
         </div>
-        <footer class="footer">sometext</footer>
+        <!--footer fixed at the bottom-->
+        <footer class="fixed-bottom bg-dark">sometext</footer>
     </div>
+
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
